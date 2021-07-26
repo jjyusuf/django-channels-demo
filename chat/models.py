@@ -6,7 +6,7 @@ class GroupMessage(models.Model):
     created  = models.DateTimeField(auto_now_add=True)
 
     def __str__(self) -> str:
-        return self.message
+        return self.content
 
-    def last_messages(self):
-        return self.objects.all()[:20]
+    def last_messages():
+        return GroupMessage.objects.all()[:20]

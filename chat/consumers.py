@@ -32,7 +32,7 @@ class ChatConsumer(WebsocketConsumer):
             result.append(self.message_to_json(message))
         return result
 
-    def message_to_json(message):
+    def message_to_json(self, message):
         return {
             'id': message.id,
             'content': message.content,
